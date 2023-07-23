@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import { v4 as uuidv4 } from 'uuid';
 
-
-
 // eslint-disable-next-line react/prop-types
 const Result = ({ data, word ,audio  }) => {
   

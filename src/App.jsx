@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  });
+  },[]);
 
   return (
     <>
@@ -60,7 +60,7 @@ function App() {
           </form>
         </div>
       </div>
-      <Result data={data} word={word} audio={audio} />
+      <Result data={data} word={word} audio={audio}/>
       <Footer/>
     </>
   );
