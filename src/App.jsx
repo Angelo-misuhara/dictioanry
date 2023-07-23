@@ -6,14 +6,9 @@ import Footer from './components/Footer';
 
 function App() {
   const [data, setData] = useState([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('hello');
   const [audio, setAudio] = useState('');
   const [word, setWord] = useState('');
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    fetchData();
-  };
 
   const fetchData = () => {
     axios
@@ -36,9 +31,14 @@ function App() {
       });
   };
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    fetchData();
+  };
+
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   return (
     <>

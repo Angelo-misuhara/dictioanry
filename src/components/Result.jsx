@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import uuid from 'react-uuid';
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 // eslint-disable-next-line react/prop-types
 const Result = ({ data, word ,audio  }) => {
   
-
   console.log(data)
   const playSound = () => {
     new Audio(audio).play()
@@ -24,7 +25,7 @@ const Result = ({ data, word ,audio  }) => {
             {data.map((meaning) => {
               return (
                 <>
-                  <li className='text-start font-semibold p-1 list-disc list-inside' key={uuid()}>
+                  <li className='text-start font-semibold p-1 list-disc list-inside' key={uuidv4()}>
                     { meaning.definitions[0].definition}
                   </li>
                 </>
