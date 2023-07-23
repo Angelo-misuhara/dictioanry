@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [data, setData] = useState([]);
-  const [search, setSearch] = useState('hello');
+  const [search, setSearch] = useState('cat');
   const [audio, setAudio] = useState('');
   const [word, setWord] = useState('');
 
